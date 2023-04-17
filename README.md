@@ -21,7 +21,7 @@ The users should be able to:
 
 ### Link
 
-- Live Site URL: [https://lougc.github.io/e-commerce-product-page/]
+- Live Site URL: [https://lourdes84.github.io/ecommerce-product-page/]
 
 ## My process
 
