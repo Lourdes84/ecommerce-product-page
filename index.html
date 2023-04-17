@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>E-commerce product page</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body id="overflow">
+
+  <!-- HEADER -->
+  <header class="header container">
+
+    <!-- MENU RESPONSIVE -->
+
+      <!--Menu responsive icon-->
+      <div class="header__icon__responsive">
+        <img src="images/icon-menu.svg" alt="menu" id="btnMenuResponsive">
+      </div>
+
+      <!--Menu responsive navigation-->
+      <div class="menu-responsive__container">
+        <div class="menu-responsive__close">
+          <img src="images/icon-close.svg" alt="close-menu" id="btnCloseMenu">
+        </div>
+        <nav class="menu-responsive__navigation">
+          <a href="#" class="menu-responsive__navigation__link">Collections</a>
+          <a href="#" class="menu-responsive__navigation__link">Men</a>
+          <a href="#" class="menu-responsive__navigation__link">Women</a>
+          <a href="#" class="menu-responsive__navigation__link">About</a>
+          <a href="#" class="menu-responsive__navigation__link">Contact</a>
+        </nav>
+      </div>
+
+    <!-- LOGO -->
+    <div class="header__logo">
+      <img src="images/logo.svg" alt="Logo">
+    </div>
+
+    <!-- NAVIGATION DESKTOP-->
+
+    <nav class="header__nav">
+        <a href="#" class="header__nav__link header__nav__link--active">Collections</a>
+        <a href="#" class="header__nav__link">Men</a>
+        <a href="#" class="header__nav__link">Women</a>
+        <a href="#" class="header__nav__link">About</a>
+        <a href="#" class="header__nav__link">Contact</a>
+    </nav>
+
+    <!-- HEADER CART -->
+
+    <section class="header__cart">
+      <div class="header__cart__icon__container">
+        <img class ="header__cart__icon" src="images/icon-cart.svg" alt="cart" id="button-cart">
+        <span class="header__cart__icon__total"></span>
+      </div>
+      <div>
+        <img class="header__cart__avatar" src="images/image-avatar.png" alt="avatar">
+      </div>
+    </section>
+  </header>
+
+  <!-- MAIN WIDTGET -->
+
+  <main class="container main-widget">
+
+    <!-- CONTAINER CART -->
+
+    <div class="container__cart">
+      <div class="container__cart__title">
+        <h3>Cart</h3>
+      </div>
+      <div class="container__cart__info">
+        <p>Your cart is empty</p>
+      </div>
+      <button class="container__cart__button container__cart__button--hidden">Checkout</button>
+    </div>
+
+    <!-- SECTION IMAGE PRODUCT -->
+
+    <section class="container-images">
+
+      <div class="container-image">
+        <div class="btn-previous">
+          <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="container-images__principal">
+          <img src="images/image-product-1.jpg" alt="Image product" id="imagePrincipal">
+        </div>
+        <div class="btn-next">
+          <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- IMAGES THUMBNAILS-->
+
+      <div  class="container-images__thumbnail">
+
+        <!-- IMAGE THUMBNAIL 1-->
+        <div class="images__thumbnail__item">
+          <div class="image__thumbnail active">
+              <img src="images/image-product-1-thumbnail.jpg" alt="thumbnail sneakers">
+          </div>
+        </div>
+
+        <!-- IMAGE THUMBNAIL 2-->
+        <div class="images__thumbnail__item">
+          <div class="image__thumbnail">
+              <img src="images/image-product-2-thumbnail.jpg" alt="thumbnail sneakers">
+          </div>
+        </div>
+
+        <!-- IMAGE THUMBNAIL 3-->
+        <div class="images__thumbnail__item">
+          <div class="image__thumbnail">
+              <img src="images/image-product-3-thumbnail.jpg" alt="thumbnail sneakers">
+          </div>
+        </div>
+
+        <!-- IMAGE THUMBNAIL 4-->
+        <div class="images__thumbnail__item">
+          <div class="image__thumbnail">
+              <img src="images/image-product-4-thumbnail.jpg" alt="thumbnail sneakers">
+          </div>
+        </div>
+      
+      </div>
+
+    </section>
+
+    <!-- SECTION INFO PRODUCT -->
+
+    <article class="container-info">
+      <h4>Sneaker Company</h4>
+      <h1 class="container-info__title">Fall Limited Edition Sneakers</h1>
+      <p class="container-info__paragraph">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <section class="container-info__prices">
+
+        <div class="container-info__prices__price">
+          $125.00
+          <div class="container-info__prices__discount">
+            50%
+          </div>
+        </div>
+        
+        <div class="container-info__price__previous">$250.00</div>
+      </section>
+
+      <!-- BUTTONS ADD, DECREMENT AND INCREMENT -->
+
+      <section class="container-info__buttons">
+          <div class="container-info__button__add">
+            <button id="decrement">-</button>
+            <span class="info__total__add">0</span>
+            <button id="increment">+</button>
+          </div>
+            <button class="container-info__button__cart">
+              <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#FFFFFF" fill-rule="nonzero"/>
+              </svg>
+              Add to cart
+            </button>
+      </section>
+    </article>
+
+    <!-- MODAL WINDOW -->
+
+    <div class="modal-container">
+
+      <!-- MODAL CONTAINER IMAGE PRINCIPAL -->
+
+      <div class="modal-container__image modal-container__close">
+
+        <div class="modal-container__image__close">
+          <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg" id="btnClose">
+            <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/>
+          </svg>
+        </div>
+
+        <div class="modal-container__image__principal">
+          <div class="btn-previous">
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="image__principal__modal">
+            <img src="images/image-product-1.jpg" alt="product" id="imagePrincipalModal">
+          </div>
+          <div class="btn-next">
+            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- MODAL CONTAINER IMAGES THUMBNAILS -->
+
+        <div class="modal-container__thumbnail">
+
+          <!-- MODAL IMAGE THUMBNAIL 1 -->
+            <div class="images__thumbnail__item">
+              <div class="image__thumbnail__modal">
+                <img src="images/image-product-1-thumbnail.jpg" alt="thumbnail sneakers">
+              </div>
+            </div>
+
+            <!-- MODAL IMAGE THUMBNAIL 2 -->
+            <div class="images__thumbnail__item">
+              <div class="image__thumbnail__modal">
+                <img src="images/image-product-2-thumbnail.jpg" alt="thumbnail sneakers">
+              </div>
+            </div>
+
+            <!-- MODAL IMAGE THUMBNAIL 3 -->
+            <div class="images__thumbnail__item">
+              <div class="image__thumbnail__modal">
+                <img src="images/image-product-3-thumbnail.jpg" alt="thumbnail sneakers">
+              </div>
+            </div>
+            
+            <!-- MODAL IMAGE THUMBNAIL 4 -->
+            <div class="images__thumbnail__item">
+              <div class="image__thumbnail__modal">
+                <img src="images/image-product-4-thumbnail.jpg" alt="thumbnail sneakers">
+              </div>
+            </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
